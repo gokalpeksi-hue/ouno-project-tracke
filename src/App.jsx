@@ -18,13 +18,12 @@ export default function App() {
     const onResize = () => {
       const mobile = window.innerWidth < 900
       setIsMobile(mobile)
-      if (!mobile) setMenuOpen(false)   // büyük ekrana geçince menü kapansın
+      if (!mobile) setMenuOpen(false)
     }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Mobilde bir menü öğesine basınca menü otomatik kapansın
   const handleViewChange = (v) => { setActiveView(v); if (isMobile) setMenuOpen(false) }
   const handleProjectChange = (p) => { setActiveProject(p); if (isMobile) setMenuOpen(false) }
 
