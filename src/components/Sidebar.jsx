@@ -37,7 +37,6 @@ export default function Sidebar({ activeView, onViewChange, activeProject, onPro
 
   return (
     <>
-      {/* Mobil: arka plan karartması */}
       {isMobile && (
         <div onClick={onClose} style={{
           position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 1090,
@@ -47,12 +46,10 @@ export default function Sidebar({ activeView, onViewChange, activeProject, onPro
       )}
 
       <aside style={isMobile ? { ...baseAside, ...mobileAside } : baseAside}>
-        {/* Logo */}
         <div style={{ padding: '16px 16px 12px', borderBottom: '1px solid var(--gray-100)' }}>
           <OunoLogo size="sm" />
         </div>
 
-        {/* Main nav */}
         <div style={{ padding: '8px 0' }}>
           <div style={{ fontSize: 9.5, fontWeight: 600, color: 'var(--gray-300)', letterSpacing: '.6px', padding: '8px 16px 4px', textTransform: 'uppercase' }}>Ana menü</div>
           {NAV_ITEMS.map(item => (
@@ -76,7 +73,6 @@ export default function Sidebar({ activeView, onViewChange, activeProject, onPro
           ))}
         </div>
 
-        {/* Projects */}
         <div style={{ padding: '4px 0' }}>
           <div style={{ fontSize: 9.5, fontWeight: 600, color: 'var(--gray-300)', letterSpacing: '.6px', padding: '8px 16px 4px', textTransform: 'uppercase' }}>Projelerim</div>
           {PROJECTS.map((p, i) => (
@@ -103,7 +99,6 @@ export default function Sidebar({ activeView, onViewChange, activeProject, onPro
           </button>
         </div>
 
-        {/* Project tools */}
         <div style={{ padding: '4px 0', borderTop: '1px solid var(--gray-100)', marginTop: 4 }}>
           <div style={{ fontSize: 9.5, fontWeight: 600, color: 'var(--gray-300)', letterSpacing: '.6px', padding: '8px 16px 4px', textTransform: 'uppercase' }}>Proje araçları</div>
           {NAV_ITEMS_2.map(item => (
@@ -123,7 +118,6 @@ export default function Sidebar({ activeView, onViewChange, activeProject, onPro
           ))}
         </div>
 
-        {/* Footer */}
         <div style={{ marginTop: 'auto', padding: '12px 12px', borderTop: '1px solid var(--gray-100)' }}>
           <button onClick={() => onViewChange('ai')} style={{
             width: '100%', padding: '8px 12px', background: 'var(--red)',
