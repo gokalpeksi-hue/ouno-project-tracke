@@ -11,7 +11,6 @@ export default function Topbar({ activeProject, onNewProject, isMobile, onMenuTo
       height: 52, display: 'flex', alignItems: 'center',
       padding: isMobile ? '0 12px' : '0 20px', gap: isMobile ? 10 : 14, flexShrink: 0
     }}>
-      {/* Mobil: hamburger menü düğmesi */}
       {isMobile && (
         <button onClick={onMenuToggle} aria-label="Menü" style={{
           width: 34, height: 34, borderRadius: 'var(--radius-sm)',
@@ -33,7 +32,6 @@ export default function Topbar({ activeProject, onNewProject, isMobile, onMenuTo
       </span>
 
       <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
-        {/* Search — yalnızca masaüstünde */}
         {!isMobile && (
           <div style={{
             display: 'flex', alignItems: 'center', gap: 7,
@@ -46,7 +44,6 @@ export default function Topbar({ activeProject, onNewProject, isMobile, onMenuTo
           </div>
         )}
 
-        {/* New project */}
         <Tooltip title="Yeni proje" items={['AI omurga ile başlat', 'Departman & ekip ata', 'Sprint döngüsü kur']} position="below" align="right">
           <button onClick={onNewProject} style={{
             display: 'flex', alignItems: 'center', gap: 5,
@@ -61,7 +58,6 @@ export default function Topbar({ activeProject, onNewProject, isMobile, onMenuTo
           </button>
         </Tooltip>
 
-        {/* Notifications */}
         <Tooltip title="Bildirimler" items={['3 yeni bildirim', 'Onay talepleri', 'AI uyarıları']} position="below" align="right">
           <div style={{ position: 'relative' }}>
             <button style={{
